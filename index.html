@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Playbook</title>
+
+<style>
+:root{
+    --gold:#d4af37;
+    --gold-light:#f6df8d;
+    --black:#0a0a0a;
+    --paper:#f8f3e8;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#111;
+    font-family:Georgia, "Times New Roman", serif;
+    color:white;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    radial-gradient(circle at center,
+    #222 0%,
+    #111 50%,
+    #050505 100%);
+}
+
+.book-frame{
+    border:4px solid var(--gold);
+    padding:70px;
+    text-align:center;
+    position:relative;
+}
+
+.book-frame::before{
+    content:"";
+    position:absolute;
+    inset:20px;
+    border:1px solid rgba(212,175,55,.5);
+}
+
+.logo{
+    font-size:6rem;
+    letter-spacing:12px;
+    color:var(--gold);
+    text-shadow:
+        0 0 15px rgba(212,175,55,.25);
+}
+
+.tagline{
+    margin-top:15px;
+    letter-spacing:5px;
+    color:var(--gold-light);
+    text-transform:uppercase;
+}
+
+.quote{
+    margin-top:30px;
+    max-width:700px;
+    color:#ccc;
+    font-style:italic;
+    line-height:1.8;
+}
+
+/* BUTTON */
+
+.enter-btn{
+    display:inline-block;
+    margin-top:40px;
+    padding:15px 40px;
+    border:2px solid var(--gold);
+    color:var(--gold);
+    text-decoration:none;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    transition:.3s;
+}
+
+.enter-btn:hover{
+    background:var(--gold);
+    color:black;
+}
+
+/* SECTION */
+
+.section{
+    background:var(--paper);
+    color:#222;
+    padding:80px 30px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:2.5rem;
+}
+
+.divider{
+    width:100%;
+    height:2px;
+    background:linear-gradient(
+        to right,
+        transparent,
+        var(--gold),
+        transparent
+    );
+    margin:20px 0 50px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border:1px solid #ddd;
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:var(--gold);
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#555;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:#0a0a0a;
+    border-top:2px solid var(--gold);
+    color:#888;
+}
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+```
+<div class="book-frame">
+
+    <h1 class="logo">PLAYBOOK</h1>
+
+    <p class="tagline">
+        Legendary Edition
+    </p>
+
+    <p class="quote">
+        "Within these pages lie stories, adventures,
+        ridiculous ideas, impossible plans, and a few
+        legends that may or may not have happened."
+    </p>
+
+    <a class="enter-btn" href="plays.html">
+        Enter The Playbook
+    </a>
+
+</div>
+```
+
+</section>
+
+<section class="section">
+
+```
+<div class="container">
+
+    <h2>Featured Plays</h2>
+
+    <div class="divider"></div>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>The Time Traveler</h3>
+            <p>
+                Arrive from the future with warnings
+                about subscription elevators and
+                celebrity goldfish.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>The Lost Prince</h3>
+            <p>
+                A tale of mistaken royalty,
+                mysterious inheritance,
+                and dramatic entrances.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>The Secret Agent</h3>
+            <p>
+                Every mission is classified.
+                Every explanation raises
+                more questions.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<footer>
+    THE PLAYBOOK • LEGENDARY EDITION
+</footer>
+
+</body>
+</html>
